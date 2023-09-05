@@ -1,0 +1,484 @@
+/*
+Template Name: PSD to HTML
+Author: Alomgir Hosen
+Version: 1.0
+Description: Convert PSD to HTML, A simple portfolio template
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Reuseable Components  */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.section-title h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #000;
+}
+.section-title p{
+    font-size: 22px;
+    color: #000;
+}
+
+/* hero */
+
+#hero {
+    height: 100vh;
+    background: linear-gradient(#02c04458, #000000a6), url(img/alomgir-removebg-preview.png) no-repeat center top/cover;
+}
+nav{
+    padding: 40px 0;
+   
+}
+nav.uk-sticky-fixed {
+    background-color: #000000;
+    padding: 0px;
+}
+
+.df{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo img{
+   width: 90px;
+    
+}
+
+.menu ion-icon{
+    font-size: 50px;
+    color: #fff;
+    border: 2.5px solid #fff;
+    position: relative;
+    z-index: 1;
+    
+}
+
+
+/* NAVIGATION */
+
+.menu-container {
+    width:0;
+    height: 100vh;
+    background: #000000fc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.menu-container .close-btn a ion-icon {
+    color: #fff;
+    font-size: 3rem;
+    border: 2px solid #fff;
+    position: absolute;
+    top: 4rem;
+    right: 5rem;
+}
+
+.nevigation ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    list-style: none;
+    
+}
+.nevigation ul li  {
+    margin:7px 0 ;
+    font-size: 27px; 
+}
+.nevigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nevigation ul li a:hover{
+    color: #075be1;
+}
+
+/* hero content  */
+
+.hero-content-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-content-box h1{
+    font-size: 45px;
+    color: #fff;
+    letter-spacing: 1px;
+    
+}
+.hero-content-box h1::before {
+    content: '';
+    height: 1.5px;
+    background: #fff;
+    display: block;
+
+}
+.hero-content-box h1::after {
+    content: '';
+    height: 1.5px;
+    background: #fff;
+    display: block;
+    
+}
+.hero-content-box span {
+    font-size: 19px;
+    color: #fff;
+   text-align: center;
+   margin-top: 18px;
+   display: block;
+}
+.next-section{
+    text-align: center;
+    
+    
+}
+.next-section a{
+    font-size: 45px;
+    color: #fff;
+    bottom: 45px;
+    position: absolute;
+    z-index: 1;
+}
+.next-section ion-icon{
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.next-section a ion-icon{
+    position: relative;
+    -webkit-animation: arrow 2s ease-in-out infinite;
+            animation: arrow 2s ease-in-out infinite;
+    
+}
+
+canvas.particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/* Animation */
+
+@-webkit-keyframes arrow {
+    0%{
+        top: 10px;
+
+    }
+    50%{
+        top: 30px;
+    }
+    100%{
+        top: 10px;
+    }
+}
+
+@keyframes arrow {
+    0%{
+        top: 10px;
+
+    }
+    50%{
+        top: 30px;
+    }
+    100%{
+        top: 10px;
+    }
+}
+
+/* About */
+
+#about{
+    background: linear-gradient(#dec9e5c0, #4771ad6c);
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 70px;
+  
+}
+.about-grid-item img {
+    width: 100%;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);    
+}
+.about-grid-item h4{
+    font-size: 20px;
+    color: #000;
+}
+.about-grid-item p{
+    margin: 40px 0;
+    color: #000;
+}
+.about-grid-item a{
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 50px;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-top: 50px;
+    display: inline-block;
+}
+.about-grid-item a:hover{
+    background-color: #E1C8E7;
+    border: 1px solid #000;
+    color: #000;
+}
+
+/* Process */
+
+#process {
+    background-color: rgba(120, 119, 119, 0.175);
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+.process-grid-item {
+    background:linear-gradient(#d17f285a, #07a51959);
+    padding: 120px 0;
+    text-align: center;
+}
+.process-grid-item ion-icon {
+    font-size: 45px;
+    color: #000;
+}
+.process-grid-item p {
+    font-size: 25px;
+    margin-top: 20px;
+    color: #000;
+}
+.process-grid-item:nth-child(2){
+    background: linear-gradient(#e3e30177, #7702cb4e);
+}
+.process-grid-item:nth-child(3){
+    background: linear-gradient(#e306dc4c, #02e1d24c);
+}
+.process-grid-item:nth-child(4){
+    background: linear-gradient(#d1ec054c, #088bdd47);
+}
+
+/* Work  */
+
+#work{
+    height: 100vh;
+    background: url(img/back1.jpg) no-repeat center top/cover fixed;
+}
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.work-grid-item {
+    background: #00000065;
+    padding: 20px;
+}
+.work-grid-item h3{
+    font-size: 35px;
+    margin-bottom: 35px;
+    margin-top: 20px;
+    color: #fff;
+}
+.job h4{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+.job span {
+    font-size: 18px;
+    color: #fff;
+   
+}
+.job p{
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* HEARD  */
+
+#heard {
+    background: linear-gradient(#de64077a, #07b9cd74);
+}
+
+.section-title button{
+    background-color: #000;
+    border: 1px solid #000;
+    text-decoration: none;
+    padding: 10px 25px;
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 50px;
+    display: inline-block;
+}
+.section-title button:hover{
+    background-color: #cb0d0d;
+}
+.heard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.heard-grid-item img {
+    width: 100%;
+    height: 100%;
+}
+.heard-grid-item:nth-child(5) {
+    grid-column: 1/3;
+}
+.uk-lightbox {
+    background: #000000aa;
+}
+
+/* TETIMONIAL */
+
+#testimonial{
+    background: url(img/testimonial.jpg) no-repeat center /cover fixed;
+}
+.tm-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.tm-grid-item {
+    color: #000;
+}
+
+/* contact */
+
+#contact {
+    background:url(img/back22.jpg) no-repeat center /cover fixed;
+}
+.ct-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+.ct-grid-item:nth-child(1) {
+    background: #000000c5;
+    padding: 30px;
+}
+.ct-grid-item h3{
+    font-size: 35px;
+    color: #fff;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px 0;
+    background: transparent;
+    color: #fff;
+}
+textarea{
+    height: 200px;
+}
+.submit-btn .submit-btn-sss{
+    background-color: #075be1;
+    padding: 10px 40px;
+    border: 1px solid #fff;
+    font-size: 20px;
+    color: #fff;
+}
+.submit-btn .submit-btn-sss:hover {
+    background-color: #811401;
+    
+    
+}
+.submit-btn {
+    text-align: right;
+    margin-top: 20px;
+}
+.nested-ct-grid{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+}
+.nested-ct-grid-item {
+    background: #000000c2;
+    padding: 20px;
+}
+.nested-ct-grid-item p {
+    color: #fff;
+}
+
+/* FOOTER  */
+
+#footer {
+    background-color: #000;
+    text-align: center;
+}
+
+.list ul{
+    text-align: center;
+    margin-top: 20px;
+}
+.list ul li{
+    list-style: none;
+    display: inline-block;
+    
+}
+.list ul li a ion-icon{
+    font-size: 40px;
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+    margin-left: 20px;
+    
+    
+}
+.list ul li a ion-icon:hover {
+
+    box-shadow: 0 0 5px cyan, 0 0 25px, 0 0 50px cyan, 0 0 100px, 0 0 200px cyan;
+}
+.copy-right p {
+    color: #fff;
+    font-size: 20px;
+}
+.totop a {
+    border: 1px solid #fff;
+    padding: 15px;
+    color: #fff;
+}
